@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+import Headline from "./componenets/headline";
+import Cart from "./componenets/cart";
+import Client from "./componenets/client";
+import initialProducts from "./db/productsData";
+
+const App = () => {
+  const [products, setProducts] = useState(initialProducts);
+
+  const handleQuantityChange = (productName, newQuantity) => {
+    const updatedProducts = products.map((product) => {
+      return product.name === productName
+        ? { ...product, quantity: newQuantity }
+        : product;
+    });
+    setProducts(updatedProducts);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Headline />
+      <div className="tahles">
+        <Cart products={products} />
+        <Client onQuantityChange={handleQuantityChange} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
