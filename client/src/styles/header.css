@@ -1,0 +1,595 @@
+body {
+  font-family: Heebo, sans-serif;
+  margin: 0;
+}
+.sami{
+  float: none;
+  margin: 0;
+  position: fixed;
+  width: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
+  z-index: 30;
+  display: block;
+  padding: 0 0 40px;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(215, 114, 51);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.left-h {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.images {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.what-logo {
+  width: 40px;
+  margin-left: 25px;
+}
+.linkdin-logo {
+  margin-left: 10px;
+  width: 100px;
+}
+
+.middle-h {
+  font-size: 45px;
+}
+
+.logo {
+  margin-right: 40px;
+  width: 120px;
+  border-radius: 20px;
+}
+
+.first-coteret {
+  margin: 0;
+  padding: 0;
+}
+
+.second {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.tahles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Spread items horizontally */
+  align-items: top; /* Vertically center items */
+  padding: 20px; /* Add some spacing */
+  margin-top: 10px;
+
+}
+
+.client {
+  display: flex;
+
+  flex-direction: column;
+  margin-right: 10px;
+  direction: rtl;
+}
+.cash {
+  display: flex;
+
+  border-radius: 24px;
+  font-weight: 800;
+  flex-direction: column;
+  width: 300px;
+  height:480px;
+  padding-top: 5px;
+  border: 2px solid #333; /* Set the border color and width */
+
+
+}
+.wraperCart {
+  border-bottom: 1px solid #bcbcbc;
+  margin-bottom: 5px;
+  max-height: 35vh;
+  overflow: auto;
+  min-height: 240px;
+  direction: rtl;
+}
+.timing {
+  border-top: 1px solid #bcbcbc;
+}
+.time-logo {
+  margin-top: 10px;
+  width: 26px;
+  height: 27px;
+}
+
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+}
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.options {
+  display: grid;
+  width :90%;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.pic-grid {
+  width: 200px; /* Adjust the width as needed */
+  height: 150px;
+  border-radius: 10%;
+}
+
+.Kugel-Baktana {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+}
+.details {
+}
+.detailsAadd {
+  width: 180px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.plus-minus {
+  display: flex;
+  flex-direction: row;
+}
+.plus-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.minus-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+.pay-button {
+  background-color: rgb(215, 114, 51);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 700px;
+  margin-right: 0px;
+  background-color: rgb(215, 114, 51);
+  color: white;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.cool-input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.input-wrapper {
+  margin-bottom: 20px;
+  align-self: center;
+  margin-left: 25px;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+
+
+}
+.buy-button{
+  background-color: rgb(215, 114, 51);;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 150px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.back-button{
+  background-color: rgb(215, 114, 51);;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 70px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.pay-buttonB,
+.pay-buttonA {
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgb(215, 114, 51);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 200px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.cool-input::placeholder {
+  color: white; /* Change the placeholder text color to white */
+}
+
+.check {
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+  display: block;
+  font-size: 16px;
+  clear: both;
+  line-height: 1.1;
+}
+.order {
+  display: flex;
+  flex-direction: row;
+}
+.product-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.product-number {
+  border: 1px solid black;
+
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 10px;
+  color: rgb(215, 114, 51);
+  padding: 8px;
+  border-radius: 20%; /* Creates a circular shape */
+}
+
+.product-cost {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 14px;
+}
+.items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.product-name {
+  flex-grow: 1;
+  margin-right: 10px;
+  font-weight: 400;
+}
+.cost-prev {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+  color: rgb(37, 211, 102);
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+}
+@media (max-width: 1003px) {
+  .middle-h{
+    font-size: 20px;
+  }
+}
+@media(min-width:901px){
+  .pay-buttonB{
+    display: none;
+  }
+  .sami{
+    display: none;
+  }
+}
+@media (max-width:900px) {
+  .options{
+    grid-template-columns: 1fr 1fr;
+}
+.pay-buttonA {
+  display: none;
+}
+.client{
+  width:100%;
+}
+.middle-h{
+  font-size: 20px;
+}
+.tahles{
+  width: 50%;
+  direction: rtl;
+  margin-left:300px;
+}
+.form{
+  width:100%;
+  margin-right:30px;
+}
+.cash{
+  display: none;
+}
+
+}
+@media (max-width: 768px) {
+  
+
+  .options{
+      grid-template-columns: 1fr 1fr;
+  }
+  .client{
+    width:100%;
+  }
+  .middle-h{
+    font-size: 20px;
+  }
+  .tahles{
+    width: 50%;
+    direction: rtl;
+    margin-left:300px;
+  }
+  .form{
+    width:100%;
+    margin-right:30px;
+  }
+  .cash{
+    display: none;
+  }
+  
+
+}
+@media (max-width: 660px) {
+
+  
+  .options{
+      grid-template-columns:  1fr 1fr;
+  }
+  .tahles{
+    width: 10%;
+    direction: rtl;
+    margin-left:370px;
+    
+  }
+  .form{
+    width: 230px;
+  }
+  .pic-grid{
+    width: 180px;
+    height: 100px;
+  }
+  .form{
+    width: 300px;
+    margin-left: 100px;
+  }
+  .input-wrapper{
+    width: 170px;
+    margin-left: 42px;
+  }
+  .pay-buttonA{
+    width: 170px;
+    margin-left: 3px;
+  }
+  
+   .left-h {
+    margin-top:10px;
+     margin-left: 15px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+   }
+   .second,
+   .middle-h{
+     font-size: 14px;
+     margin-right: 10px;
+     margin-left: 10px;
+   }
+}
+
+
+@media(max-width:565px){
+  .second,
+  .middle-h{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  .middle-h{
+    display: none;
+  }
+  .options{
+      grid-template-columns: 1fr 1fr;
+      
+  }
+  .tahles{
+    width: 10%;
+    direction: rtl;
+    margin-left:370px;
+    
+  }
+  .form{
+    width: 230px;
+    margin-right: 55px;
+  }
+  .pic-grid{
+    width: 180px;
+    height: 100px;
+  }
+  .form{
+    width: 300px;
+    margin-left: 100px;
+  }
+  .input-wrapper{
+    width: 170px;
+    margin-left: 42px;
+  }
+  .pay-buttonA{
+    width: 170px;
+    margin-left: 3px;
+  }
+  .right-h{
+    margin-right: 20px;
+   }
+   .left-h {
+     margin-left: 5px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+   }
+}
+@media (max-width: 460px) {
+
+
+
+  .middle-h{
+    display: none;
+  }
+  .right-h{
+   margin-left:15px;
+  }
+  .logo{margin:0px}
+  .left-h {
+    margin-left: -2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .options{
+      grid-template-columns:  1fr;
+      margin-right:50px;
+
+  }
+  .tahles{
+    width: 0px;
+    direction: rtl;
+    margin-left:320px;
+    padding: 0px;
+    
+  }
+  
+  .pic-grid{
+    width: 180px;
+    height: 100px;
+  }
+  .form{
+    width: 230px;
+    margin-right: 32px;
+  }
+  .input-wrapper{
+    width: 150px;
+    margin-left: 42px;
+  }
+
+  .pay-buttonA{
+    width: 150px;
+    margin-left: 3px;
+  }
+}
