@@ -21,7 +21,7 @@ const Form = ({handleToggle,products,name,setName,phone,setPhone}) => {
           
       event.preventDefault();
       try{
-        await axios.post("http://localhost:3001/auth/register",{
+        await axios.post("https://kugel-macher.onrender.com/auth/register",{
           phone,
           name,
         });
@@ -30,7 +30,7 @@ const Form = ({handleToggle,products,name,setName,phone,setPhone}) => {
       }
 
       try{
-        await axios.post("http://localhost:3001/order/reserve",{
+        await axios.post("https://kugel-macher.onrender.com/order/reserve",{
           phone,
           name,
           baktana: products[0].quantity ? products[0].quantity : 0,

@@ -27,7 +27,7 @@ const Modal = ({ isOpen, onClose ,products}) => {
  
   async function fetchOrdersByPhone(phone) {
     try {
-      const response = await fetch(`http://localhost:3001/order/reserve?phone=${phone}`);
+      const response = await fetch(`https://kugel-macher.onrender.com/order/reserve?phone=${phone}`);
       return response;
     } catch (error) {
       throw error;

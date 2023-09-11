@@ -5,7 +5,7 @@ import {UserModel} from '../models/Users.js'
 const router=express.Router();
 
 router.post("/register",async (req,res)=>{
-    const{name,phone}=req.body;
+    const{phone,name}=req.body;
     const phoner= await UserModel.findOne({ phone });
 
     if(phoner){
