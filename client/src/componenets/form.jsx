@@ -69,7 +69,7 @@ const Form = ({handleToggle,products,name,setName,phone,setPhone}) => {
       <button className="pay-buttonB" onClick={handleToggle}>לעגלה</button>
       <p style={{ direction:"rtl",fontSize: "16px",marginBottom:"0px", marginTop: "-12px", textAlign: "center", color:"black",fontWeight:"700"}}>
 
-ההזמנה תתקבל רק לאחר אישור שלנו בווצאפ !
+ההזמנה תתקבל רק לאחר אישור שלנו בווצאפ ! 0534224108
 </p>
 
 
