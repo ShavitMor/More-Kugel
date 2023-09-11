@@ -16,16 +16,14 @@ router.post("/reserve",async (req,res)=>{
 
 router.get("/reserve",async (req,res)=>{
     try {
-        const { phone } = req.query; // Get the phone number from the query parameters
+        const { phone } = req.query; 
     
         if (!phone) {
           return res.status(400).json({ error: "Phone number is required" });
         }
     
-        // Find orders that match the provided phone number
         const orders = await OrderModel.find({ phone });
     
-        // Return the found orders as a JSON response
         res.status(200).json({ orders });
       } catch (error) {
         console.error("Error fetching orders:", error);

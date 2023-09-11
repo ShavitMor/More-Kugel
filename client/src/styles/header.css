@@ -17,6 +17,10 @@ body {
   padding: 0 0 40px;
   overflow-y: auto;
 }
+.name{
+  border-bottom: 1px solid #333; 
+
+}
 
 .header {
   display: flex;
@@ -74,9 +78,9 @@ body {
 .tahles {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Spread items horizontally */
-  align-items: top; /* Vertically center items */
-  padding: 20px; /* Add some spacing */
+  justify-content: space-between;
+  align-items: top; 
+  padding: 20px; 
   margin-top: 10px;
 
 }
@@ -97,8 +101,7 @@ body {
   width: 300px;
   height:480px;
   padding-top: 5px;
-  border: 2px solid #333; /* Set the border color and width */
-
+  border: 2px solid #333;
 
 }
 .wraperCart {
@@ -156,7 +159,7 @@ body {
 }
 
 .pic-grid {
-  width: 200px; /* Adjust the width as needed */
+  width: 200px; 
   height: 150px;
   border-radius: 10%;
 }
@@ -169,8 +172,7 @@ body {
   position: relative;
 
 }
-.details {
-}
+
 .detailsAadd {
   width: 180px;
 
@@ -238,8 +240,8 @@ body {
   margin-right: 0px;
   background-color: rgb(215, 114, 51);
   color: white;
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
+  align-items: center; 
+  justify-content: center; 
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
@@ -316,7 +318,7 @@ body {
   margin-bottom: 20px;
 }
 .cool-input::placeholder {
-  color: white; /* Change the placeholder text color to white */
+  color: white; 
 }
 
 .check {
@@ -348,7 +350,7 @@ body {
   font-size: 10px;
   color: rgb(215, 114, 51);
   padding: 8px;
-  border-radius: 20%; /* Creates a circular shape */
+  border-radius: 20%; 
 }
 
 .product-cost {
@@ -365,6 +367,7 @@ body {
   flex-grow: 1;
   margin-right: 10px;
   font-weight: 400;
+  
 }
 .cost-prev {
   font-size: 18px;

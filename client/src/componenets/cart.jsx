@@ -78,9 +78,10 @@ const Cart = ({ products}) => {
           איסוף מבאר שבע, אוסבלדו ארניה 18
         </div>
 
-        <p style={{ fontSize: "14px", marginTop: "8px", textAlign: "center" }}>
+        <p style={{ fontSize: "14px", marginTop: "0px", textAlign: "center" }}>
           ימי שישי : 08:00-14:00
         </p>
+       
       </div>
     </div>
   );

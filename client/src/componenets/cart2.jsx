@@ -22,7 +22,7 @@ const Cart2 = ({ products,handle,name,phone }) => {
           
       event.preventDefault();
       try{
-        await axios.post("http://localhost:3001/auth/register",{
+        await axios.post("https://kugel-macher.onrender.com/auth/register",{
           phone,
           name,
         });
@@ -31,14 +31,14 @@ const Cart2 = ({ products,handle,name,phone }) => {
       }
 
       try{
-        await axios.post("http://localhost:3001/order/reserve",{
+        await axios.post("https://kugel-macher.onrender.com/order/reserve",{
           phone,
           name,
           baktana: products[0].quantity ? products[0].quantity : 0,
           family:products[1].quantity ? products[1].quantity : 0,
           kugeledet:products[2].quantity ? products[2].quantity : 0,
         });
-        alert("reservation complete!")
+        alert(" complete!")
       }catch(err){
         console.error(err);
       }

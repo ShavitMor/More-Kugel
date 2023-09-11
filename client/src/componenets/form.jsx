@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import header from "../styles/header.css";
 import axios from "axios";
 
 const Form = ({handleToggle,products,name,setName,phone,setPhone}) => {
@@ -37,7 +36,7 @@ const Form = ({handleToggle,products,name,setName,phone,setPhone}) => {
           family:products[1].quantity ? products[1].quantity : 0,
           kugeledet:products[2].quantity ? products[2].quantity : 0,
         });
-        alert("reservation complete!")
+        alert("נא לוודא שליחת הזמנה בווצאפ!")
       }catch(err){
         console.error(err);
       }
@@ -68,6 +67,11 @@ const Form = ({handleToggle,products,name,setName,phone,setPhone}) => {
       </div>
       <button className="pay-buttonA" onClick={handleButtonClick}>הזמן עכשיו !</button>
       <button className="pay-buttonB" onClick={handleToggle}>לעגלה</button>
+      <p style={{ direction:"rtl",fontSize: "16px",marginBottom:"0px", marginTop: "-12px", textAlign: "center", color:"black",fontWeight:"700"}}>
+
+ההזמנה תתקבל רק לאחר אישור שלנו בווצאפ !
+</p>
+
 
     </div>
   );

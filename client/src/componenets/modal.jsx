@@ -4,7 +4,6 @@ import '../styles/modal.css';
 
 const Modal = ({ isOpen, onClose ,products}) => {
   const [phone, setPhone] = useState('');
-  const [name, setName] = useState('');
   const [orders, setOrders] = useState([]);
 
   const handleSubmit = async () => {

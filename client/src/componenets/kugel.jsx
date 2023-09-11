@@ -1,7 +1,4 @@
 import React from "react";
-import kugelBaktana from "../images/littleKugel.jpeg";
-import header from "../styles/header.css";
-import { initialProducts } from "../db/productsData";
 import { useCounter } from "../counterHook";
 
 const Kugel = (props) => {

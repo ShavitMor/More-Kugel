@@ -5,19 +5,19 @@ export const useCounter = (initial = 0, productName, handleQuantityChange) => {
 
   const increase = () => {
     setCount(count + 1);
-    handleQuantityChange(productName, count + 1); // Update the product quantity
+    handleQuantityChange(productName, count + 1); 
   };
 
   const decrease = () => {
     if (count !== 0) {
       setCount(count - 1);
-      handleQuantityChange(productName, count - 1); // Update the product quantity
+      handleQuantityChange(productName, count - 1);
     }
   };
 
   const reset = () => {
     setCount(0);
-    handleQuantityChange(productName, 0); // Update the product quantity
+    handleQuantityChange(productName, 0); 
   };
 
   return [count, increase, decrease, reset];
