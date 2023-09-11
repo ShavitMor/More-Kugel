@@ -14,7 +14,7 @@ app.use(cors());
 app.use("/auth",userRouter);
 app.use("/order",orderRouter);
 
-mongoose.connect("mongodb+srv://shavitost:test1234@clusteron.ydxydq2.mongodb.net/clusteron")
+mongoose.connect(process.env.MONGO);
 
 
 app.listen(3001,()=>console.log("SERVER STARTED"));
