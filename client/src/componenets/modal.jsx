@@ -34,10 +34,8 @@ const Modal = ({ isOpen, onClose ,products}) => {
   }
 
   const handleCopyOrder = (order) => {
-    const cost= order.baktana*12+order.family*30+order.kugeledet*80;
+    const cost= order.baktana*15+order.family*40+order.kugeledet*100;
     
-      console.log(cost);
-      console.log(order.phone);
     const websiteURL = `https://wa.me/972534224108?text=היי%20שמי%20${order.name}%0Aמספר%20טלפון:%20${order.phone}%0A%0Aאשמח%20להזמין:%0A${order.baktana}%20קיגל%20בקטנה%0A${order.family}%20קיגל%20משפחתי%0A${order.kugeledet}%20קוגלדת%0A%0Aסך%20לתשלום%20:%20${cost}%20ש%22ח%0A%0A`;
     window.open(websiteURL, '_blank');
     }
