@@ -38,7 +38,7 @@ const Cart2 = ({ products,handle,name,phone }) => {
           family:products[1].quantity ? products[1].quantity : 0,
           kugeledet:products[2].quantity ? products[2].quantity : 0,
         });
-        alert(" complete!")
+        alert("נא לוודא שליחת הזמנה בווצאפ!");
       }catch(err){
         console.error(err);
       }
@@ -67,8 +67,6 @@ const Cart2 = ({ products,handle,name,phone }) => {
         <div className="wraperCart">
           <ul className="items">
             {products.map((product, index) => {
-              console.log(product);
-
               return product.quantity > 0 ? (
                 <Order
                   key={index}
