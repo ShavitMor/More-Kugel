@@ -1,6 +1,6 @@
-import kugelBaktana from "../images/littleKugel.jpeg";
-import familyKugel from "../images/familyKugel.jpeg";
-import kugeledet from "../images/Kugeledet.jpg";
+import kugelBaktana from "../images/Baktana1.jpeg";
+import familyKugel from "../images/Family1.jpeg";
+import kugeledet from "../images/Kugeledet1.jpeg";
 
 const initialProducts = [
   {

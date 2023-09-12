@@ -28,7 +28,7 @@ const Headline = ({modal}) => {
             <h3 style={{ marginTop: "-7px" }}>Say Hi!</h3>
           </div>
           <div>
-          <h3 onClick={modal} style={{ marginTop: "-7px",   cursor: "pointer"}}>
+          <h3 onClick={modal} style={{direction:"rtl", marginTop: "-7px",   cursor: "pointer"}}>
             להזמנות קודמות!</h3>
           </div>
         </div>
