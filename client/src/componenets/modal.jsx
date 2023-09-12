@@ -1,4 +1,3 @@
-// Modal.js
 import React, { useState } from 'react';
 import '../styles/modal.css';
 
@@ -57,7 +56,6 @@ const Modal = ({ isOpen, onClose ,products}) => {
         />
         <h3 style={{direction:"rtl"}}>הזמנות שלך:</h3>
         <ul style={{ direction: "rtl" }}>
-          {console.log(orders)}
           {orders.map((order) => (
             <li key={order._id} style={{ display: "flex", alignItems: "center" }}>
               <div style={{ flex: 1 }}>
