@@ -5,14 +5,14 @@ import kugeledet from "../images/Kugeledet1.jpeg";
 const initialProducts = [
   {
     img: kugelBaktana,
-    cost: 15,
+    cost: 16,
     name: "קוגל בקטנה",
     details: "4 משולשים",
     quantity:0,
   },
   {
     img: familyKugel,
-    cost: 40,
+    cost: 45,
     name: "קוגל משפחתי",
     details: "12 משולשים",
     quantity:0,
@@ -21,7 +21,7 @@ const initialProducts = [
     img: kugeledet,
     cost: 100,
     name: "קוגלדת",
-    details: "32 משולשים",
+    details: "24 משולשים",
     quantity:0,
   },
 ];
