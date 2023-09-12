@@ -21,7 +21,7 @@ const initialProducts = [
     img: kugeledet,
     cost: 100,
     name: "קוגלדת",
-    details: "24 משולשים",
+    details: "32 משולשים",
     quantity:0,
   },
 ];
