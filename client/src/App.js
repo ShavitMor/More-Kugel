@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 import Headline from "./componenets/headline";
 import Cart from "./componenets/cart";
@@ -37,6 +37,19 @@ const App = () => {
     setIsModalOpen(false);
   };
 
+  //we using it only to wake up the server, we use rended so it wakes up only after we make call to the server.
+  async function wakeTheServer() {
+    try {
+      const response = await fetch(`https://kugel-macher.onrender.com/order/reserve?phone=${1}`);
+      console.log("hi");
+      return response;
+    } catch (error) {
+      throw error;
+    }
+  }
+  useEffect(() => {
+    wakeTheServer();
+  }, []);
 
   return (
     <div className="App">
