@@ -1,10 +1,13 @@
-import React from "react";
+import React, {  useContext } from "react";
+
 import "../styles/header.css";
 import linkdin from "../images/Linkedin-Logo.png";
 import whatsap from "../images/WhatsApp.png";
 import logo from "../images/logoKugel.png";
+import { AppContext } from "../App";
 
-const Headline = ({modal}) => {
+const Headline = () => {
+  const {openModal} = useContext(AppContext);
   return (
     <>
       <header className="header">
@@ -28,7 +31,7 @@ const Headline = ({modal}) => {
             <h3 style={{ marginTop: "-7px" }}>Say Hi!</h3>
           </div>
           <div>
-          <h3 onClick={modal} style={{direction:"rtl", marginTop: "-7px",   cursor: "pointer"}}>
+          <h3 onClick={openModal} style={{direction:"rtl", marginTop: "-7px",   cursor: "pointer"}}>
             להזמנות קודמות!</h3>
           </div>
         </div>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, {  useContext } from "react";
 import "../styles/header.css";
 import timeLogo from "../images/icon-time.png";
 import Order from "./order";
+import { AppContext } from "../App";
 
-const Cart = ({ products}) => {
+const Cart = () => {
+  const {products}=useContext(AppContext);
+  
   return (
     <div className="cash">
       <div className="cart-head">

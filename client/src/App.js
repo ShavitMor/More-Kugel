@@ -1,10 +1,13 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, createContext } from "react";
 
 import Headline from "./componenets/headline";
 import Cart from "./componenets/cart";
 import Client from "./componenets/client";
 import Modal from "./componenets/modal";
 import initialProducts from "./db/productsData";
+
+export const AppContext =createContext();
+
 
 const App = () => {
   const [products, setProducts] = useState(initialProducts);
@@ -41,7 +44,7 @@ const App = () => {
   async function wakeTheServer() {
     try {
       const response = await fetch(`https://kugel-macher.onrender.com/order/reserve?phone=${1}`);
-      console.log("hi");
+      console.log("Server aWake");
       return response;
     } catch (error) {
       throw error;
@@ -51,27 +54,25 @@ const App = () => {
     wakeTheServer();
   }, []);
 
+
   return (
+    <AppContext.Provider value={{openModal,products,handleQuantityChange,bool,name,phone,setName,setPhone,handleToggle}}>
     <div className="App">
-      <Headline modal={openModal}/>
-      <div className="tahles">
-        
-        <Cart products={products}  />
-        <Client onQuantityChange={handleQuantityChange} products={products} bool={bool} toggle={handleToggle} name={name} phone={phone} setName={setName} setPhone={setPhone}/>
-      
+      <Headline modal/>
+      <div className="tahles"> 
+        <Cart />
+        <Client />
       </div>
       
       { isModalOpen? 
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
-        products={products}
-        setProducts={setProducts}
-        handleQuantityChange={handleQuantityChange}
       /> : null
       }
 
     </div>
+    </AppContext.Provider>
   );
 };
 

@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Kugel from "./kugel";
 import Form from "./form";
 import Cart2 from './cart2'
 import initialProducts from "../db/productsData";
+import { AppContext } from "../App";
 
 const Client = (props) => {
  
-
+const {handleQuantityChange,products,bool}=useContext(AppContext);
   return (
     <div className="client">
       <section className="options">
@@ -16,17 +17,17 @@ const Client = (props) => {
             cost={product.cost}
             name={product.name}
             details={product.details}
-            handle={props.onQuantityChange}
+            handle={handleQuantityChange}
             quantity={product.quantity}
-            products={props.products}
+            products={products}
           />
         ))}
       </section>
-      <Form handleToggle={props.toggle} products={props.products} name={props.name} phone={props.phone} setName={props.setName} setPhone={props.setPhone}/>
+      <Form />
 
-      {props.bool ? (
+      {bool ? (
         <div className="sami">
-          <Cart2 products={props.products} handle={props.toggle} name={props.name} phone={props.phone}/>
+          <Cart2 />
         </div>
       ) : (
         <></>

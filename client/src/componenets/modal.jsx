@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/modal.css';
 
-const Modal = ({ isOpen, onClose ,products}) => {
+const Modal = ({ isOpen, onClose}) => {
   const [phone, setPhone] = useState('');
   const [orders, setOrders] = useState([]);
 

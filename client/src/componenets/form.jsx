@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import axios from "axios";
+import { AppContext } from "../App";
 
-const Form = ({handleToggle,products,name,setName,phone,setPhone}) => {
+const Form = () => {
 
-  
+  const {setPhone,products,setName,name,phone,handleToggle}=useContext(AppContext);
+
   const handleButtonClick =async (event) => {
     const cost= products.reduce((sum, product) =>
       products

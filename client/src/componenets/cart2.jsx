@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/header.css";
 import timeLogo from "../images/icon-time.png";
 import Order from "./order";
 import axios from "axios";
+import { AppContext } from "../App";
 
-const Cart2 = ({ products,handle,name,phone }) => {
+const Cart2 = () => {
+
+
+  const {products,name,phone,handleToggle}=useContext(AppContext);
 
   const handleButtonClick =async (event) => {
     const cost= products.reduce((sum, product) =>
@@ -128,7 +132,7 @@ const Cart2 = ({ products,handle,name,phone }) => {
         <div className="buttons">
         <button className="buy-button" onClick={handleButtonClick}>הזמן עכשיו!</button>
 
-        <button className="back-button" onClick={handle}>חזור</button>
+        <button className="back-button" onClick={handleToggle}>חזור</button>
         </div>
       </div>
     </div>
