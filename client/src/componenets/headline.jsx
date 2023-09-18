@@ -7,7 +7,7 @@ import logo from "../images/logoKugel.png";
 const Headline = ({modal}) => {
   return (
     <>
-      <div className="header">
+      <header className="header">
         <div className="left-h">
           <div className="images">
             <a
@@ -46,7 +46,7 @@ const Headline = ({modal}) => {
         <div className="right-h">
           <img className="logo" src={logo} alt="Kugel Logo" />
         </div>
-      </div>
+      </header>
     </>
   );
 };

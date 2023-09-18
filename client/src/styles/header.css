@@ -401,6 +401,7 @@ body {
 }
 .client{
   width:100%;
+  direction: rtl;
 }
 .middle-h{
   font-size: 20px;
@@ -408,11 +409,16 @@ body {
 .tahles{
   width: 50%;
   direction: rtl;
-  margin-left:300px;
+}
+.App{
+  direction: rtl;
+
+}
+.header{
+  direction: ltr;
 }
 .form{
   width:100%;
-  margin-right:30px;
 }
 .cash{
   display: none;
@@ -438,7 +444,6 @@ body {
   }
   .form{
     width:100%;
-    margin-right:30px;
   }
   .cash{
     display: none;
@@ -453,26 +458,24 @@ body {
       grid-template-columns:  1fr 1fr;
   }
   .tahles{
-    width: 10%;
     direction: rtl;
-    margin-left:370px;
     
   }
   .form{
-    width: 230px;
+    width: 400px;
+
   }
   .pic-grid{
     width: 180px;
     height: 100px;
   }
-  .form{
-    width: 300px;
-    margin-left: 100px;
-  }
+ 
   .input-wrapper{
     width: 170px;
     margin-left: 42px;
   }
+
+
   .pay-buttonA{
     width: 170px;
     margin-left: 3px;
@@ -512,23 +515,17 @@ body {
       
   }
   .tahles{
-    width: 10%;
     direction: rtl;
-    margin-left:370px;
     
   }
   .form{
-    width: 230px;
-    margin-right: 55px;
+    width: 400px;
   }
   .pic-grid{
     width: 180px;
     height: 100px;
   }
-  .form{
-    width: 300px;
-    margin-left: 100px;
-  }
+
   .input-wrapper{
     width: 170px;
     margin-left: 42px;
@@ -567,24 +564,16 @@ body {
 
   .options{
       grid-template-columns:  1fr;
-      margin-right:50px;
 
   }
-  .tahles{
-    width: 0px;
-    direction: rtl;
-    margin-left:320px;
-    padding: 0px;
-    
-  }
+
   
   .pic-grid{
     width: 180px;
     height: 100px;
   }
   .form{
-    width: 230px;
-    margin-right: 32px;
+    width: 300px;
   }
   .input-wrapper{
     width: 150px;
