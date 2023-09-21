@@ -22,16 +22,17 @@ const Form = () => {
           
       event.preventDefault();
       try{
-        await axios.post("https://kugel-macher.onrender.com/auth/register",{
+        //await axios.post("https://kuge  l-macher.onrender.com/auth/register"
+        await axios.post("http://localhost:3001/visit/addGuest",{//only for guests
           phone,
-          name,
+          name
         });
       }catch(err){
         console.error(err);
       }
 
       try{
-        await axios.post("https://kugel-macher.onrender.com/order/reserve",{
+        await axios.post("http://localhost:3001/order/reserve",{
           phone,
           name,
           baktana: products[0].quantity ? products[0].quantity : 0,

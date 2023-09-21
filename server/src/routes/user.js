@@ -5,16 +5,16 @@ import {UserModel} from '../models/Users.js'
 const router=express.Router();
 
 router.post("/register",async (req,res)=>{
-    const{phone,name}=req.body;
+    const{name,password,phone}=req.body;
     const phoner= await UserModel.findOne({ phone });
 
     if(phoner){
         return res.json({message:"number already exists!"});
     }
-    const newUser=new UserModel({phone,name})
+    const newUser=new UserModel({name,password,phone})
     await newUser.save();
 
-    res.json({message:"number Joined Succesfully!"});
+    res.json({message:"user registered Succesfully!"});
 
 });
 

@@ -1,9 +1,12 @@
 import React, { useState,useEffect, createContext } from "react";
+import { BrowserRouter as Router, Route, Routes,useNavigate } from "react-router-dom"; // Import Routes instead of Route
 
 import Headline from "./componenets/headline";
 import Cart from "./componenets/cart";
 import Client from "./componenets/client";
 import Modal from "./componenets/modal";
+import Open from "./componenets/open";
+
 import initialProducts from "./db/productsData";
 
 export const AppContext =createContext();
@@ -41,37 +44,56 @@ const App = () => {
   };
 
   //we using it only to wake up the server, we use rended so it wakes up only after we make call to the server.
-  async function wakeTheServer() {
-    try {
-      const response = await fetch(`https://kugel-macher.onrender.com/order/reserve?phone=${1}`);
-      console.log("Server aWake");
-      return response;
-    } catch (error) {
-      throw error;
-    }
-  }
-  useEffect(() => {
-    wakeTheServer();
-  }, []);
+  // async function wakeTheServer() {
+  //   try {
+  //     const response = await fetch(`https://kugel-macher.onrender.com/order/reserve?phone=${1}`);
+  //     console.log("Server aWake");
+  //     return response;
+  //   } catch (error) {
+  //     throw error;
+  //   }
+  // }
+  // useEffect(() => {
+  //   wakeTheServer();
+  // }, []);
 
-
+ 
+ 
   return (
-    <AppContext.Provider value={{openModal,products,handleQuantityChange,bool,name,phone,setName,setPhone,handleToggle}}>
-    <div className="App">
-      <Headline modal/>
-      <div className="tahles"> 
-        <Cart />
-        <Client />
-      </div>
-      
-      { isModalOpen? 
-      <Modal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-      /> : null
-      }
+    <AppContext.Provider
+      value={{
+        openModal,
+        products,
+        handleQuantityChange,
+        bool,
+        name,
+        phone,
+        setName,
+        setPhone,
+        handleToggle,
+      }}
+    >
+      <Router>
+          <Routes> {/* Wrap your Route components in a Routes */}
+            <Route path="/" element={<Open />} />
+            <Route path="/main" element={
+            <>
+            <div className="App">
+            <Headline modal />
+            <div className="tahles">
+              <Cart />
+              <Client />
+            </div>
+            {isModalOpen ? (
+            <Modal isOpen={isModalOpen} onClose={closeModal} />
+          ) : null}
+            </div>
 
-    </div>
+            </>
+            } />
+          </Routes>
+        
+      </Router>
     </AppContext.Provider>
   );
 };
