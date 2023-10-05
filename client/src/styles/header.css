@@ -94,12 +94,11 @@ body {
 }
 .cash {
   display: flex;
-
   border-radius: 24px;
   font-weight: 800;
   flex-direction: column;
   width: 300px;
-  height:480px;
+  height:510px;
   padding-top: 5px;
   border: 2px solid #333;
 
@@ -115,6 +114,7 @@ body {
 .timing {
   border-top: 1px solid #bcbcbc;
 }
+  
 .time-logo {
   margin-top: 10px;
   width: 26px;
@@ -245,6 +245,26 @@ body {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
+.previous{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 700px;
+  margin-right: 0px;
+  background-color: rgb(215, 114, 51);
+  color: white;
+  align-items: center; 
+  height: 289px;
+
+
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.scrollable-list {
+  max-height: 180px; /* Adjust the height as needed */
+  overflow-y: auto; /* Enable vertical scroll if content overflows */
+  margin:0px;
+}
 
 .cool-input {
   width: 100%;
@@ -341,7 +361,21 @@ body {
   padding: 10px;
   border-bottom: 1px solid #ccc;
 }
+.nowOrder{
+  background-color: rgb(215, 114, 51);
+  border-radius: 20px;
+  color:white;
+  border:none;
+  padding:10px;
+  padding-left:20px;
+  padding-right:20px;
+  font-size: 16px;
+  margin-top: 8px;
+  font-weight: 600;
+  cursor: pointer;
 
+
+}
 .product-number {
   border: 1px solid black;
 

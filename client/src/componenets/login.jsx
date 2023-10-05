@@ -1,33 +1,57 @@
-import React, { useState } from "react";
+import React, { useState ,useContext} from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
-    const [_, setCookies] = useCookies(["access_token"]);
+import { AppContext } from "../App";
 
-    const [username, setUsername] = useState("");
+
+const Login = () => {
+    const {setName,setPhone,name}=useContext(AppContext);
+
+    const [_, setCookies] = useCookies(["access_token"]);
     const [password, setPassword] = useState("");
-  
     const navigate = useNavigate();
-  
+
     const navigateToMain = () => {
+      setName("");
+      setPhone("");
       navigate('/main');
    };
 
-   
+    async function updatePhone(){
+    try {
+      const response = await fetch(`https://kugel-macher.onrender.com/auth/getClient?name=${name}`);
+      const ans= await response.json();
+      const phone=ans.user.phone;
+      console.log(phone);
+      setPhone(phone);
+    } catch (error) {
+     console.error("phone not updated after login");
+    }
+   }
+
+
     const handleSubmit = async (event) => {
       event.preventDefault();
   
       try {
-        // const result = await axios.post("http://localhost:3001/auth/login", {
-        //   username,
-        //   password,
-        // });
+        const result = await axios.post("https://kugel-macher.onrender.com/auth/login", {
+          username: name,
+          password,
+        });
   
-        // setCookies("access_token", result.data.token);
-        // window.localStorage.setItem("userID", result.data.userID);
-        // navigate("/");
+        setCookies("access_token", result.data.token);
+        window.localStorage.setItem("userID", result.data.userID);
+
+        if(result.data.userID){
+          updatePhone();
+          navigate("/main");
+        }
+        else{
+        
+        }
+
       } catch (error) {
         console.error(error);
       }
@@ -43,8 +67,8 @@ const Login = () => {
               id="username"
               className="cool-input"
               placeholder="שם"
-              value={username}
-              onChange={(event) => setUsername(event.target.value)}
+              value={name}
+              onChange={(event) => setName(event.target.value)}
             />
           </div>
           <div className="form-group">

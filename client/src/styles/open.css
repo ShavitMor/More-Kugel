@@ -2,7 +2,7 @@
 
 .start{
     background-color:rgb(215, 114, 51);
-    height: 136.3vh;
+    height: 97.3vh;
     width: 100vw;
     text-align: center;
     align-items: center;
@@ -94,13 +94,37 @@ button[type="submit"] {
 
     padding: 5px 10px;
   }
-  .tmuna{
-    content: "";
-    margin-top: 20px;
-    background: url(../images/startKugel.jpeg) no-repeat top center / cover;
-    position: absolute;
-    width: 55vw;
-    height: 40vw;
-    top:500px;
-    
+  .openingLogo{
+  width:320px;
+  }
+
+  @media (max-width:900px) {
+  .previous{
+    width:650px;
+  }
+
+
+  @media (max-width: 660px) {
+    .previous{
+      width:500px;
+    }
+  
+  }
+
+
+  @media (max-width: 540px) {
+    .previous{
+      width:400px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .previous{
+      width:300px;
+    }
+  }
+
+
+
+
   }

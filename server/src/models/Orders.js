@@ -6,7 +6,7 @@ const OrdersSchema=new mongoose.Schema({
     baktana:{type:Number,required:true},
     family:{type:Number,required:true},
     kugeledet:{type:Number,required:true},
-    date:{type: Date},
+    date:{type: String},
 });
 
 export const OrderModel =mongoose.model("orders",OrdersSchema);

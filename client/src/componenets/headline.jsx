@@ -1,13 +1,27 @@
 import React, {  useContext } from "react";
-
+import { useCookies } from "react-cookie";
 import "../styles/header.css";
 import linkdin from "../images/Linkedin-Logo.png";
 import whatsap from "../images/WhatsApp.png";
 import logo from "../images/logoKugel.png";
+import { useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
 
 const Headline = () => {
-  const {openModal} = useContext(AppContext);
+  const [cookies,setCookies] = useCookies(["access_token"]);
+  const navigate=useNavigate();
+  const {setName,setPhone,name}=useContext(AppContext);
+
+  const logout= ()=>{
+      setCookies("n","");
+      window.localStorage.removeItem("userID");
+      setName(undefined);
+      setPhone(undefined);
+      navigate("/");
+      
+  }
+
+
   return (
     <>
       <header className="header">
@@ -31,8 +45,13 @@ const Headline = () => {
             <h3 style={{ marginTop: "-7px" }}>Say Hi!</h3>
           </div>
           <div>
-          <h3 onClick={openModal} style={{direction:"rtl", marginTop: "-7px",   cursor: "pointer"}}>
-            להזמנות קודמות!</h3>
+            {cookies.access_token ?
+          (<h3 onClick={logout} style={{direction:"rtl", marginTop: "-7px",   cursor: "pointer"}}>
+            יציאה</h3>)
+            :
+            (<h3 onClick={logout} style={{direction:"rtl", marginTop: "-7px",   cursor: "pointer"}}>
+            הרשמה\התחברות</h3>)
+          }
           </div>
         </div>
 

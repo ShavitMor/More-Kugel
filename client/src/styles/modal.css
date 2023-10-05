@@ -66,11 +66,12 @@
   }
   
   .copy-button {
-    background-color: rgb(215, 114, 51);
-    color: white;
-    border: none;
+    background-color: white;
+    color: rgb(215, 114, 51);
+    border: none; 
+    border-radius: 20px;
+    margin-right:10px;
     padding: 5px 10px;
-    margin-left: 10px;
     cursor: pointer;
   }
   
