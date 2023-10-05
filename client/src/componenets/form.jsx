@@ -22,9 +22,10 @@ const Form = () => {
           
       event.preventDefault();
       try{
-        await axios.post("https://kugel-macher.onrender.com/auth/register",{
+        //await axios.post("https://kuge  l-macher.onrender.com/auth/register"
+        await axios.post("https://kugel-macher.onrender.com/visit/addGuest",{//only for guests
           phone,
-          name,
+          name
         });
       }catch(err){
         console.error(err);
