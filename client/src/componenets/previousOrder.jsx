@@ -73,7 +73,7 @@ const PreviousOrder = () => {
       
       <div className="scrollable-list">
         <ul style={{ direction: "rtl" }}>
-          {orders.reverse().map((order) => (
+          {orders.map((order) => (
             <li key={order._id} style={{ display: "flex", alignItems: "center" }}>
               <div style={{ flex: 1, margin: "0px", padding: "0px" }}>
                 {order.date} : קוגל בקטנה: {order.baktana}, קוגל משפחתי: {order.family}, עוגת קוגלדת: {order.kugeledet}
